@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password_Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,
+opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display
+:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div
+      class="wrapper flex flex-col justify-center items-center bg-gradient-to-tr from-blue to-purple-400 h-[100vh] w-[100vw] gap-4"
+    >
+      <div class="containe  flex-col  justify-center items-center">
+        <h1 class="text-center text-[2rem] text-yellow-500 ">Password Generator</h1>
+
+        <div class="display-container flex justify-between">
+          <input
+            readonly
+            placeholder="Password"
+            class="display  h-10 w-[90%] text-center  text-black font-bold placeholder:text-blue"
+            data-PasswordDisplay
+          />
+          <button data-copy class="flex" >
+            <img src="./assets/copy.png" alt="copy" class="h-8 w-8 copyImage border-2 p-1 ml-1  " />
+            <span data-copyMsg class="absolute ml-9 text-white shadowdone opacity-0"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Password section -->
+
+      <div class="input-container   p-8">
+        <!-- Passwor Length Section -->
+
+        <div class="length-container flex justify-between ">
+          <p class="text-white shadowdone">Password Length</p>
+          <p data-lengthNumber class="text-white border-2 px-2 border-yellow-200"></p>
+        </div>
+        <!-- slider -->
+        <input
+          type="range"
+          min="1"
+          max="20"
+          class="slider w-40 "
+          step="1"
+          data-lengthSlider
+        />
+
+        <!-- checkboxes -->
+        <div class="text-white">
+          <input type="checkbox" id="uppercase" />
+          <label for="uppercase">Includes Uppercase letters</label>
+        </div>
+        <div class="text-white">
+          <input type="checkbox" id="lowercase" />
+          <label for="lowercase">Includes Lowercases letters</label>
+        </div>
+        <div class="text-white">
+          <input type="checkbox" id="numbers" />
+          <label for="numbers">Includes Numbers letters</label>
+        </div>
+        <div class="text-white">
+          <input type="checkbox" id="symbols" />
+          <label for="symbols">Includes Symbols letters</label>
+        </div>
+      </div>
+
+      <!-- Strength -->
+      <div class="strength-container flex justify-between w-72">
+        <p class="pl-3 text-white shadowdone ">Strength</p>
+        <div class="indicator h-4 w-4 border-2 bg-gray-500 rounded-full mr-2 " data-indicator></div>
+      </div>
+      <!-- generate-password -->
+      <button class="generateButton  rounded-md p-2 border-2">Generate Password</button>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

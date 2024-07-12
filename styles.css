@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+   font-optical-sizing: auto;
+   font-style: normal;
+   overflow-x: hidden;
+}
+h1{
+    text-shadow: 0px 0px 9px rgb(11, 11, 11);
+}
+.shadowdone{
+    text-shadow: 1px 0px 2px rgb(11, 11, 11);
+}
+.display{
+    text-shadow: 0px 2px 6px rgb(231, 224, 13);
+    background-image: linear-gradient(to right,rgb(233, 217, 217),rgb(63, 63, 7));
+    border-radius: 20px;
+}
+
+.slider{
+    border: 2px solid yellow;
+}
+.input-container{
+    background-color: rgba(18, 11, 39, 0.281);
+    border-radius: 10px;
+}
+.generateButton{
+    background-color: rgba(197, 156, 22, 0.842);
+}
+.active{
+    opacity: 100;
+}
