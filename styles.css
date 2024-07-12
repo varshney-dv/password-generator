@@ -36,6 +36,9 @@ h1{
 .generateButton{
     background-color: rgba(197, 156, 22, 0.842);
 }
+.copp{
+    opacity: 0;
+}
 .active{
     opacity: 100;
 }
